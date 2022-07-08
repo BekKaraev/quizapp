@@ -1,16 +1,13 @@
-
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-
-  // ignore: use_key_in_widget_constructors
   const CustomButton({
     this.text,
-    this.tus,
+    this.color,
     this.onPressed,
   });
   final String text;
-  final Color tus;
+  final Color color;
   final Function onPressed;
 
   @override
@@ -18,7 +15,7 @@ class CustomButton extends StatelessWidget {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: tus),
+        style: ElevatedButton.styleFrom(primary: color),
         onPressed: onPressed,
         child: Padding(
           padding: const EdgeInsets.symmetric(
