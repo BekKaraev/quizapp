@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:quizapp/constants/color/custom_button_colors.dart';
 import 'package:quizapp/widgets/custom_button.dart';
 import 'package:quizapp/data/repos/quiz_repo.dart';
 import 'package:quizapp/widgets/icon_widget.dart';
@@ -16,11 +17,11 @@ class _QuizPageState extends State<QuizPage> {
   bool isFinished;
 
   Widget correctIcon = const IconWidget(
-    color: Color(0xff4EA052),
+    color:Buttoncolors.buttonColor,
     icons: FontAwesomeIcons.check,
   );
   Widget wrongIcon = const IconWidget(
-    color: Color(0xffF54335),
+    color:Buttoncolors.buttonColors,
     icons: FontAwesomeIcons.xmark,
   );
 
@@ -65,7 +66,7 @@ class _QuizPageState extends State<QuizPage> {
                 children: [
                   CustomButton(
                     text: 'Туура',
-                    color: const Color(0xff4EA052),
+                    color: Buttoncolors.buttonColor,
                     onPressed: () {
                       userAnswerd(true);
                     },
@@ -75,7 +76,7 @@ class _QuizPageState extends State<QuizPage> {
                   ),
                   CustomButton(
                     text: 'Ката',
-                    color: const Color(0xffF54335),
+                    color: Buttoncolors.buttonColors,
                     onPressed: () {
                       userAnswerd(false);
                     },
